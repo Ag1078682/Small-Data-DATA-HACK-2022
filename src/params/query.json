@@ -1,0 +1,16 @@
+{
+  "source_database": {
+    "connection_line": "dbname=demo user=postgres password=postgres",
+    "connection_params": {
+      "host": "localhost",
+      "port": "5433",
+      "database": "demo",
+      "user": "postgres",
+      "password": "password"
+    }
+  },
+  "metadata": {},
+  "params": {
+    "query": "SELECT * FROM bookings.bookings LIMIT 10"
+  }
+}
