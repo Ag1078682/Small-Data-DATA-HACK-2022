@@ -1,6 +1,5 @@
 {
   "source_database": {
-    "connection_line": "dbname=demo user=postgres password=postgres",
     "connection_params": {
       "host": "localhost",
       "port": "5433",
