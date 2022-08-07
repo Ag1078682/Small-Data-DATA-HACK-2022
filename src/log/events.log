@@ -1,0 +1,4 @@
+2022-08-07 10:04:29.712764 Launch application 
+2022-08-07 10:04:29.831087 Fetch data from postgres source 
+2022-08-07 10:04:29.834088 Write into spark 
+2022-08-07 10:04:44.959926 Write into hdfs 
