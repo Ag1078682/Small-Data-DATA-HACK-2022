@@ -6,7 +6,8 @@
       "database": "demo",
       "user": "postgres",
       "password": "password"
-    }
+    },
+    "encoding": "UTF-8"
   },
   "target": {
     "spark": {
@@ -14,6 +15,7 @@
     },
     "file_format": "csv",
     "write_type": "overwrite/append",
+    "encoding": "UTF-8",
     "etc": {}
   },
   "metadata": [
