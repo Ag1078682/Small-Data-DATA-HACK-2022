@@ -8,8 +8,21 @@
       "password": "password"
     }
   },
-  "metadata": {},
+  "target": {
+    "spark": {
+
+    },
+    "file_format": "csv",
+    "write_type": "overwrite/append",
+    "etc": {}
+  },
+  "metadata": [
+    {"name_source": "book_ref", "name_target": "book_ref", "type_source": "bpchar(6)", "type_target": "char(6)"},
+    {"name_source": "book_date", "name_target": "book_date", "type_source": "timestamptz", "type_target": "timestamptz"},
+    {"name_source": "total_amount", "name_target": "total_amount", "type_source": "numeric(10,2)", "type_target": "long"}
+  ],
   "params": {
-    "query": "SELECT * FROM bookings.bookings LIMIT 10"
+    "query": "SELECT * FROM bookings.bookings LIMIT 10",
+    "limit": "some condition"
   }
 }

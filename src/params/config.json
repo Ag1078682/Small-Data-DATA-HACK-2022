@@ -2,7 +2,13 @@
   "log": {
     "log_file": "src/log/events.log"
   },
-  "source_database": {
-    "connection_line": ""
+  "meta_database": {
+    "connection_params": {
+      "host": "localhost",
+      "port": "5433",
+      "database": "metadata",
+      "user": "postgres",
+      "password": "password"
+    }
   }
 }

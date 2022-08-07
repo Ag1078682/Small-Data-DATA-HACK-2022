@@ -5,10 +5,25 @@ from src.log.log import log
 
 
 def get_data():
+    ##ToDo
+    ## the raw_data here comes from postgres
+    ## actually, here should be a fork (function) to get it from any source
     raw_data = connect()
-    ##todo data enrichment
+    ##ToDo
+    ## after getting raw data it should actually go into pandas, so that it can be already standardized
+    ## types of data should be converted if necessary
+    ## and data enrichment by metainfo should be done here
+    ## +
+    ## the reason is
+    ## if we collect raw data from several sources than we cannot guarantee that
+    ## 1) datatypes from those sources are the same
+    ## 2) datatypes haven't changed since last time
+    ## 3) we have those whatever types in our raw_data DB
+    ## so, shouldn't they be explicitly converted?
+    ## or should we create a table for every portion of raw_data
+    ## and write _everything_ as text?
     data = enrich(raw_data)
-    return data
+    return raw_data
 
 
 def connect():
@@ -58,6 +73,7 @@ def connect():
 def select(cursor):
     ##ToDo:
     ## a function to get right set of data from tables based on recorded metadata
+    ## here the query string is hardcoded in params, but it should be generated based on metadata
     with open('src/params/query.json') as f:
         config = json.load(f)
         query = config["params"]["query"]
@@ -69,6 +85,9 @@ def select(cursor):
 
 
 def enrich(raw_data):
+    ##ToDo:
+    ## a function to enrich data by meta information
+    ## (query_id, transaction_id, time_of_query, source)
     data = raw_data
     return data
 
